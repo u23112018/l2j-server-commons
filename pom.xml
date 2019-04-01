@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.l2jserver</groupId>
 	<artifactId>l2j-server-commons</artifactId>
-	<version>2.6.1.0</version>
+	<version>2.6.1.1</version>
 	<name>L2J Server - Commons</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
