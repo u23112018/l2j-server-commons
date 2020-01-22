@@ -3,28 +3,28 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.l2jserver</groupId>
 	<artifactId>l2j-server-commons</artifactId>
-	<version>2.6.1.1</version>
+	<version>2.6.2.0</version>
 	<name>L2J Server - Commons</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
-		<slf4j.version>1.7.25</slf4j.version>
-		<mariadb-java-client.version>2.4.0</mariadb-java-client.version>
-		<mysql-connector-java.version>8.0.15</mysql-connector-java.version>
-		<HikariCP.version>3.3.1</HikariCP.version>
-		<c3p0.version>0.9.5.3</c3p0.version>
+		<slf4j.version>1.7.30</slf4j.version>
+		<mariadb-java-client.version>2.5.3</mariadb-java-client.version>
+		<mysql-connector-java.version>8.0.18</mysql-connector-java.version>
+		<HikariCP.version>3.4.2</HikariCP.version>
+		<c3p0.version>0.9.5.5</c3p0.version>
 		<bonecp.version>0.8.0.RELEASE</bonecp.version>
-		<commons-dbcp2.version>2.6.0</commons-dbcp2.version>
-		<vibur-dbcp.version>22.2</vibur-dbcp.version>
+		<commons-dbcp2.version>2.7.0</commons-dbcp2.version>
+		<vibur-dbcp.version>25.0</vibur-dbcp.version>
 		<concurrentlinkedhashmap-lru.version>1.4.2</concurrentlinkedhashmap-lru.version>
 		<weupnp.version>0.1.4</weupnp.version>
 		<javax.mail-api.version>1.6.2</javax.mail-api.version>
 		<l2j-server-mmocore.version>2.6.1.0</l2j-server-mmocore.version>
 		<!-- Test -->
-		<testng.version>6.14.3</testng.version>
+		<testng.version>7.1.0</testng.version>
 		<!-- Plugins -->
-		<maven-assembly-plugin.version>3.1.1</maven-assembly-plugin.version>
+		<maven-assembly-plugin.version>3.2.0</maven-assembly-plugin.version>
 	</properties>
 	<repositories>
 		<repository>
