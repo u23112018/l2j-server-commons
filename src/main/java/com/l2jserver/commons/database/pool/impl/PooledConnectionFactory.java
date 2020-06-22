@@ -32,7 +32,7 @@ import org.slf4j.LoggerFactory;
  * @version 2.6.1.0
  */
 public interface PooledConnectionFactory {
-	static final Logger LOG = LoggerFactory.getLogger(PooledConnectionFactory.class);
+	Logger LOG = LoggerFactory.getLogger(PooledConnectionFactory.class);
 	
 	/**
 	 * Gets the data source.

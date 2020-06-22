@@ -39,28 +39,28 @@ public class ConnectionFactory {
 	
 	private final PooledConnectionFactory pooledConnectionFactory;
 	
-	private String connectionPool;
+	private final String connectionPool;
 	
-	private String url;
+	private final String url;
 	
-	private String user;
+	private final String user;
 	
-	private String password;
+	private final String password;
 	
-	private String driver;
+	private final String driver;
 	
-	private int maxPoolSize;
+	private final int maxPoolSize;
 	
-	private int maxIdleTime;
+	private final int maxIdleTime;
 	
 	private ConnectionFactory(Builder builder) {
-		this.connectionPool = builder.connectionPool;
-		this.url = builder.url;
-		this.user = builder.user;
-		this.password = builder.password;
-		this.driver = builder.driver;
-		this.maxPoolSize = builder.maxPoolSize;
-		this.maxIdleTime = builder.maxIdleTime;
+		connectionPool = builder.connectionPool;
+		url = builder.url;
+		user = builder.user;
+		password = builder.password;
+		driver = builder.driver;
+		maxPoolSize = builder.maxPoolSize;
+		maxIdleTime = builder.maxIdleTime;
 		
 		switch (connectionPool) {
 			default:
