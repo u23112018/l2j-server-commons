@@ -10,9 +10,9 @@
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 		<slf4j.version>1.7.30</slf4j.version>
-		<mariadb-java-client.version>2.6.0</mariadb-java-client.version>
-		<mysql-connector-java.version>8.0.19</mysql-connector-java.version>
-		<HikariCP.version>3.4.3</HikariCP.version>
+		<mariadb-java-client.version>2.6.1</mariadb-java-client.version>
+		<mysql-connector-java.version>8.0.21</mysql-connector-java.version>
+		<HikariCP.version>3.4.5</HikariCP.version>
 		<c3p0.version>0.9.5.5</c3p0.version>
 		<bonecp.version>0.8.0.RELEASE</bonecp.version>
 		<commons-dbcp2.version>2.7.0</commons-dbcp2.version>
@@ -20,11 +20,11 @@
 		<concurrentlinkedhashmap-lru.version>1.4.2</concurrentlinkedhashmap-lru.version>
 		<weupnp.version>0.1.4</weupnp.version>
 		<javax.mail-api.version>1.6.2</javax.mail-api.version>
-		<l2j-server-mmocore.version>2.6.1.0</l2j-server-mmocore.version>
+		<l2j-server-mmocore.version>2.6.1.1</l2j-server-mmocore.version>
 		<!-- Test -->
 		<testng.version>7.1.0</testng.version>
 		<!-- Plugins -->
-		<maven-assembly-plugin.version>3.2.0</maven-assembly-plugin.version>
+		<maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
 	</properties>
 	<repositories>
 		<repository>
