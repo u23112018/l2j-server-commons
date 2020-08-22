@@ -66,7 +66,7 @@ public final class NewCrypt {
 		
 		long chksum = 0;
 		int count = size - 4;
-		long check = -1;
+		long check;
 		int i;
 		
 		for (i = offset; i < count; i += 4) {
@@ -169,7 +169,7 @@ public final class NewCrypt {
 		raw[pos++] = (byte) (ecx & 0xFF);
 		raw[pos++] = (byte) ((ecx >> 8) & 0xFF);
 		raw[pos++] = (byte) ((ecx >> 16) & 0xFF);
-		raw[pos++] = (byte) ((ecx >> 24) & 0xFF);
+		raw[pos] = (byte) ((ecx >> 24) & 0xFF);
 	}
 	
 	/**

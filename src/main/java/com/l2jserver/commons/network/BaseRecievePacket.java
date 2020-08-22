@@ -18,6 +18,8 @@
  */
 package com.l2jserver.commons.network;
 
+import static java.nio.charset.StandardCharsets.UTF_16LE;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,8 +45,7 @@ public abstract class BaseRecievePacket {
 	}
 	
 	public int readC() {
-		int result = _decrypt[_off++] & 0xff;
-		return result;
+		return _decrypt[_off++] & 0xff;
 	}
 	
 	public int readH() {
@@ -68,13 +69,12 @@ public abstract class BaseRecievePacket {
 	public String readS() {
 		String result = null;
 		try {
-			result = new String(_decrypt, _off, _decrypt.length - _off, "UTF-16LE");
+			result = new String(_decrypt, _off, _decrypt.length - _off, UTF_16LE);
 			result = result.substring(0, result.indexOf(0x00));
 			_off += (result.length() * 2) + 2;
 		} catch (Exception ex) {
 			LOG.warn("There has been an error trying to read an String!", ex);
 		}
-		
 		return result;
 	}
 	

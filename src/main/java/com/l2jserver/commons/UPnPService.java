@@ -77,9 +77,9 @@ public class UPnPService {
 		}
 	}
 	
-	public void removeAllPorts() throws Exception {
+	public void removeAllPorts() {
 		if (_activeGW != null) {
-			ports.forEach(p -> deletePortMapping(p));
+			ports.forEach(this::deletePortMapping);
 		}
 	}
 	

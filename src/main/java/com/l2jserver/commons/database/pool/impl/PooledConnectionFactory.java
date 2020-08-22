@@ -55,8 +55,8 @@ public interface PooledConnectionFactory {
 		while (con == null) {
 			try {
 				con = getDataSource().getConnection();
-			} catch (SQLException e) {
-				LOG.warn("{}: Unable to get a connection!", getClass().getSimpleName(), e);
+			} catch (SQLException ex) {
+				LOG.warn("Unable to get a connection!", ex);
 			}
 		}
 		return con;

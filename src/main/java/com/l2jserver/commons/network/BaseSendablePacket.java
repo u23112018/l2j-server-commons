@@ -18,6 +18,8 @@
  */
 package com.l2jserver.commons.network;
 
+import static java.nio.charset.StandardCharsets.UTF_16LE;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
@@ -65,7 +67,7 @@ public abstract class BaseSendablePacket {
 	protected void writeS(String text) {
 		try {
 			if (text != null) {
-				_bao.write(text.getBytes("UTF-16LE"));
+				_bao.write(text.getBytes(UTF_16LE));
 			}
 		} catch (Exception ex) {
 			LOG.warn("There has been an error writing an String!", ex);

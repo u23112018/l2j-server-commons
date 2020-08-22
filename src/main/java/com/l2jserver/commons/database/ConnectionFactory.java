@@ -39,30 +39,15 @@ public class ConnectionFactory {
 	
 	private final PooledConnectionFactory pooledConnectionFactory;
 	
-	private final String connectionPool;
-	
-	private final String url;
-	
-	private final String user;
-	
-	private final String password;
-	
-	private final String driver;
-	
-	private final int maxPoolSize;
-	
-	private final int maxIdleTime;
-	
 	private ConnectionFactory(Builder builder) {
-		connectionPool = builder.connectionPool;
-		url = builder.url;
-		user = builder.user;
-		password = builder.password;
-		driver = builder.driver;
-		maxPoolSize = builder.maxPoolSize;
-		maxIdleTime = builder.maxIdleTime;
+		String url = builder.url;
+		String user = builder.user;
+		String password = builder.password;
+		String driver = builder.driver;
+		int maxPoolSize = builder.maxPoolSize;
+		int maxIdleTime = builder.maxIdleTime;
 		
-		switch (connectionPool) {
+		switch (builder.connectionPool) {
 			default:
 			case "HikariCP": {
 				pooledConnectionFactory = new HikariCPPooledConnectionFactory(driver, url, user, password, maxPoolSize, maxIdleTime);

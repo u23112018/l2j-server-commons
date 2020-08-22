@@ -1146,20 +1146,16 @@ public final class BlowfishEngine {
 	}
 	
 	private void setKey(byte[] key) {
-		/**
-		 * - comments are from _Applied Crypto_, Schneier, p338.<br>
-		 * Please be careful comparing the two, AC numbers the arrays from 1, the enclosed code from 0.<br>
-		 * (1) Initialize the S-boxes and the P-array, with a fixed string This string contains the hexadecimal digits of pi (3.141...)
-		 */
+		// Comments are from _Applied Crypto_, Schneier, p338.<br>
+		// Please be careful comparing the two, AC numbers the arrays from 1, the enclosed code from 0.<br>
+		// (1) Initialize the S-boxes and the P-array, with a fixed string This string contains the hexadecimal digits of pi (3.141...)
 		System.arraycopy(KS0, 0, S0, 0, SBOX_SK);
 		System.arraycopy(KS1, 0, S1, 0, SBOX_SK);
 		System.arraycopy(KS2, 0, S2, 0, SBOX_SK);
 		System.arraycopy(KS3, 0, S3, 0, SBOX_SK);
 		System.arraycopy(KP, 0, P, 0, P_SZ);
-		/**
-		 * (2) Now, XOR P[0] with the first 32 bits of the key, XOR P[1] with the second 32-bits of the key, and so on for all bits of the key (up to P[17]).<br>
-		 * Repeatedly cycle through the key bits until the entire P-array has been XOR-ed with the key bits
-		 */
+		// (2) Now, XOR P[0] with the first 32 bits of the key, XOR P[1] with the second 32-bits of the key, and so on for all bits of the key (up to P[17]).<br>
+		// Repeatedly cycle through the key bits until the entire P-array has been XOR-ed with the key bits
 		int keyLength = key.length;
 		int keyIndex = 0;
 		for (int i = 0; i < P_SZ; i++) {
@@ -1176,13 +1172,11 @@ public final class BlowfishEngine {
 			// XOR the newly created 32 bit chunk onto the P-array
 			P[i] ^= data;
 		}
-		/**
-		 * (3) Encrypt the all-zero string with the Blowfish algorithm, using the subkeys described in (1) and (2)<br>
-		 * (4) Replace P1 and P2 with the output of step (3)<br>
-		 * (5) Encrypt the output of step(3) using the Blowfish algorithm, with the modified subkeys.<br>
-		 * (6) Replace P3 and P4 with the output of step (5)<br>
-		 * (7) Continue the process, replacing all elements of the P-array and then all four S-boxes in order, with the output of the continuously changing Blowfish algorithm
-		 */
+		// (3) Encrypt the all-zero string with the Blowfish algorithm, using the subkeys described in (1) and (2)<br>
+		// (4) Replace P1 and P2 with the output of step (3)<br>
+		// (5) Encrypt the output of step(3) using the Blowfish algorithm, with the modified subkeys.<br>
+		// (6) Replace P3 and P4 with the output of step (5)<br>
+		// (7) Continue the process, replacing all elements of the P-array and then all four S-boxes in order, with the output of the continuously changing Blowfish algorithm
 		processTable(0, 0, P);
 		processTable(P[P_SZ - 2], P[P_SZ - 1], S0);
 		processTable(S0[SBOX_SK - 2], S0[SBOX_SK - 1], S1);
@@ -1238,8 +1232,8 @@ public final class BlowfishEngine {
 	 * index.<br>
 	 * <br>
 	 * This method does not perform any error checking. This could be<br>
-	 * usefull when code calling this method performs size checks already or<br>
-	 * perfroming steps to ensure nothing can go wrong.<br>
+	 * useful when code calling this method performs size checks already or<br>
+	 * performing steps to ensure nothing can go wrong.<br>
 	 * <br>
 	 * If you want error checking use {@link #tryEncryptBlock(byte[], int)}.
 	 * @param src source array with the plain data
@@ -1254,8 +1248,8 @@ public final class BlowfishEngine {
 	 * The encrypted block goes to the destination array at the given index.<br>
 	 * <br>
 	 * This method does not perform any error checking. This could be<br>
-	 * usefull when code calling this method performs size checks already or<br>
-	 * perfroming steps to ensure nothing can go wrong.<br>
+	 * useful when code calling this method performs size checks already or<br>
+	 * performing steps to ensure nothing can go wrong.<br>
 	 * <br>
 	 * If you want error checking use {@link #tryEncryptBlock(byte[], int, byte[], int)}.
 	 * @param src source array with the plain data
@@ -1292,8 +1286,7 @@ public final class BlowfishEngine {
 	
 	/**
 	 * Method to decrypt the block at the given index.<br>
-	 * The decrypted block goes directly to the source array at the given<br>
-	 * index.
+	 * The decrypted block goes directly to the source array at the given index.
 	 * @param src source array with the encrypted data
 	 * @param srcIndex index where the block to decrypt is located
 	 * @throws IllegalStateException The cipher was not yet initialized
@@ -1338,8 +1331,8 @@ public final class BlowfishEngine {
 	 * index.<br>
 	 * <br>
 	 * This method does not perform any error checking. This could be<br>
-	 * usefull when code calling this method performs size checks already or<br>
-	 * perfroming steps to ensure nothing can go wrong.<br>
+	 * useful when code calling this method performs size checks already or<br>
+	 * performing steps to ensure nothing can go wrong.<br>
 	 * <br>
 	 * If you want error checking use {@link #tryDecryptBlock(byte[], int)}.
 	 * @param src source array with the encrypted data
@@ -1354,8 +1347,8 @@ public final class BlowfishEngine {
 	 * The decrypted block goes to the destination array at the given index.<br>
 	 * <br>
 	 * This method does not perform any error checking. This could be<br>
-	 * usefull when code calling this method performs size checks already or<br>
-	 * perfroming steps to ensure nothing can go wrong.<br>
+	 * useful when code calling this method performs size checks already or<br>
+	 * performing steps to ensure nothing can go wrong.<br>
 	 * <br>
 	 * If you want error checking use {@link #tryDecryptBlock(byte[], int, byte[], int)}.
 	 * @param src source array with the plain data

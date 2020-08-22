@@ -39,7 +39,7 @@ public class ViburDBCPPooledConnectionFactory implements PooledConnectionFactory
 		_dataSource.setPassword(password);
 		_dataSource.setPoolInitialSize(10);
 		_dataSource.setPoolMaxSize(maxPoolSize);
-		_dataSource.setConnectionIdleLimitInSeconds(30);
+		_dataSource.setConnectionIdleLimitInSeconds(maxIdleTime);
 		_dataSource.setTestConnectionQuery("isValid");
 		_dataSource.setLogQueryExecutionLongerThanMs(500);
 		_dataSource.setLogStackTraceForLongQueryExecution(true);

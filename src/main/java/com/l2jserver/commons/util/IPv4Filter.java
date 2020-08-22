@@ -29,13 +29,13 @@ import java.util.Map.Entry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.l2jserver.mmocore.IAcceptFilter;
+import com.l2jserver.mmocore.AcceptFilter;
 
 /**
  * IPv4 filter.
  * @author Forsaiken, Zoey76
  */
-public class IPv4Filter implements IAcceptFilter, Runnable {
+public class IPv4Filter implements AcceptFilter, Runnable {
 	
 	private static final Logger LOG = LoggerFactory.getLogger(IPv4Filter.class);
 	
