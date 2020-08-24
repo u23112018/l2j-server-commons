@@ -3,13 +3,15 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.l2jserver</groupId>
 	<artifactId>l2j-server-commons</artifactId>
-	<version>2.6.3.0</version>
+	<version>2.6.4.0</version>
 	<name>L2J Server - Commons</name>
+	<description>L2J Commons is a library used by login and game server implementations.</description>
+	<url>https://bitbucket.org/l2jserver/l2j-server-commons/</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<maven.compiler.source>11</maven.compiler.source>
-		<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.source>14</maven.compiler.source>
+		<maven.compiler.target>14</maven.compiler.target>
 		<slf4j.version>1.7.30</slf4j.version>
 		<mariadb-java-client.version>2.6.2</mariadb-java-client.version>
 		<mysql-connector-java.version>8.0.21</mysql-connector-java.version>
@@ -21,12 +23,41 @@
 		<concurrentlinkedhashmap-lru.version>1.4.2</concurrentlinkedhashmap-lru.version>
 		<weupnp.version>0.1.4</weupnp.version>
 		<javax.mail-api.version>1.6.2</javax.mail-api.version>
-		<l2j-server-mmocore.version>2.6.2.0</l2j-server-mmocore.version>
+		<l2j-server-mmocore.version>2.6.3.0</l2j-server-mmocore.version>
 		<!-- Test -->
 		<testng.version>7.3.0</testng.version>
 		<!-- Plugins -->
 		<maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
 	</properties>
+	<licenses>
+		<license>
+			<name>GPL 3.0</name>
+			<url>http://www.gnu.org/licenses/gpl-3.0.html</url>
+		</license>
+	</licenses>
+	<organization>
+		<name>L2J Server</name>
+		<url>https://l2jserver.com</url>
+	</organization>
+	<developers>
+		<developer>
+			<id>Zoey76</id>
+		</developer>
+		<developer>
+			<id>UnAfraid</id>
+		</developer>
+		<developer>
+			<id>HorridoJoho</id>
+		</developer>
+		<developer>
+			<id>Forsaiken</id>
+		</developer>
+	</developers>
+	<scm>
+		<connection>scm:git:git://bitbucket.org/l2jserver/l2j-server-commons.git</connection>
+		<developerConnection>scm:git:ssh://bitbucket.org:l2jserver/l2j-server-commons.git</developerConnection>
+		<url>https://bitbucket.org/l2jserver/l2j-server-commons/src</url>
+	</scm>
 	<repositories>
 		<repository>
 			<id>jitpack.io</id>

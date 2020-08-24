@@ -33,7 +33,8 @@ import com.l2jserver.mmocore.AcceptFilter;
 
 /**
  * IPv4 filter.
- * @author Forsaiken, Zoey76
+ * @author Forsaiken
+ * @author Zoey76
  */
 public class IPv4Filter implements AcceptFilter, Runnable {
 	
