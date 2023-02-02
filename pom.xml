@@ -25,7 +25,7 @@
 		<javax.mail-api.version>1.6.2</javax.mail-api.version>
 		<l2j-server-mmocore.version>2.6.3.0</l2j-server-mmocore.version>
 		<!-- Test -->
-		<testng.version>7.3.0</testng.version>
+		<testng.version>7.7.0</testng.version>
 		<!-- Plugins -->
 		<maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
 	</properties>
